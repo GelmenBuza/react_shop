@@ -1,0 +1,7 @@
+.slider {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    overflow-x: scroll;
+    width: 350px;
+}

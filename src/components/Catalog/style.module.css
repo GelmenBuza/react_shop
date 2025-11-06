@@ -1,0 +1,7 @@
+.catalog {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 360px;
+}

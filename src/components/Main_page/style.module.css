@@ -1,0 +1,9 @@
+.page {
+    background-color: #F1F1F1;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+}

@@ -1,0 +1,19 @@
+
+.search {
+    display: block;
+    border-radius: 20px;
+    width: 350px;
+    height: 50px;
+    background-color: white;
+}
+
+.search__input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+}
+
+
