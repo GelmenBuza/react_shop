@@ -1,7 +1,8 @@
 .catalog {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 360px;
+    gap: 10px;
+    width: 90%;
 }

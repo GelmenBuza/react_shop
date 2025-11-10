@@ -3,5 +3,9 @@
     flex-direction: row;
     gap: 5px;
     overflow-x: scroll;
-    width: 350px;
+    width: 360px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
 }
