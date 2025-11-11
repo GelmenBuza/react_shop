@@ -1,17 +1,34 @@
 import Main_page from './components/Main_page'
 import './App.css'
+import { useEffect, useState } from 'react'
 
 
 
 
 
 function App() {
+  const [catalogCards, setCatalogCards] = useState([])
+  const [categoriesCards, setCategoriesCards] = useState([])
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const res = await fetch('https://noxer-test.ru/webapp/api/products/on_main');
+        const resp = await res.json();
+        setCatalogCards(resp.products);
+        setCategoriesCards(resp.categoties);
+      } catch (e) {
+        throw(new Error(e));
+      }
+    };
+    load();
+  }, [])
 
   return (
     <>
-      <Main_page></Main_page>
+      <Main_page catalog={catalogCards} categoties={categoriesCards}></Main_page>
     </>
   )
 }
 
-export default App
+export default App;

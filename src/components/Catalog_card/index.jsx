@@ -1,7 +1,7 @@
 import style from './style.module.css';
 
 
-export default function Catalog_card ({image, name, price, discount, isSale, isHit, isPremium, isNew}) {
+export default function Catalog_card ({image, name, price, oldPrice, discount, isSale, isHit, isPremium, isNew}) {
     return (
         <div className={style.card}>
             <img src={image} alt="" className={style.card__img}/>
@@ -34,8 +34,8 @@ export default function Catalog_card ({image, name, price, discount, isSale, isH
                 <div className={style.price_name}>
                     {discount !== 0 ? (
                         <div className={style.card__price}>
-                            <span>{+price - (+price * discount)}₽</span>
-                            <span className={style.crossed}>{price}₽</span>
+                            <span>{price}₽</span>
+                            <span className={style.crossed}>{oldPrice}₽</span>
                             <span className={style.discount}>-{discount*100}%</span>
                         </div>
                     ) : (
@@ -47,7 +47,6 @@ export default function Catalog_card ({image, name, price, discount, isSale, isH
                 </div>
                 <button className={style.card__btn}>Выбрать</button>
             </div>
-
         </div>
     )
 }
