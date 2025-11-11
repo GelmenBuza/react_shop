@@ -44,7 +44,7 @@ export default function Catalog ({catalog_cards}) {
         cards.push({
             id: product.id,
             title: product.name,
-            image: product.images[0],
+            image: product.images[0].Image_URL,
             price: product.price,
             old_price: product.old_price,
             status: product_status,
