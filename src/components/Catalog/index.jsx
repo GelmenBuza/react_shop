@@ -1,14 +1,7 @@
 import style from './style.module.css';
 import Catalog_card from '../Catalog_card';
+import cards from '../../api.js'
 
-import card_img_1 from '../../assets/images/catalog_card/card_1.svg';
-import card_img_2 from '../../assets/images/catalog_card/card_2.svg';
-import card_img_3 from '../../assets/images/catalog_card/card_3.svg';
-import card_img_4 from '../../assets/images/catalog_card/card_4.svg';
-import card_img_5 from '../../assets/images/catalog_card/card_5.svg';
-import card_img_6 from '../../assets/images/catalog_card/card_6.svg';
-
-const card_title = ['Футболка мужская Комары', 'Свитшот женский укороченный Yamal est.2017', 'Шапка Yamal комбинация с бумбономапша', 'Брелок фирменный «Созвездие»', 'Шорты мужские Yamal', 'Сертификат Yamal 10000']
 
 export default function Catalog () {
     return (
