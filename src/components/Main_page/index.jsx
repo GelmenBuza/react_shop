@@ -6,15 +6,22 @@ import Big_slider from '../Big_slider'
 import Small_slider from '../Small_slider'
 import Catalog from '../Catalog'
 import Navigation_bar from '../Navigation_bar'
-import Fast_Search from '../Fast_Search';
 
 export default function Main_page({catalog, categories, fastSearchParam}) {
     const [searchQuery, setSearchQuery] = useState('');
+    const [isFucused, setIsFocused] = useState(false);
 
     return (
         <div className={style.page}>
-            <Search onWrite={(value) => setSearchQuery(value)} text={searchQuery} catalog={catalog} fastSearchParam={fastSearchParam}></Search>
-            {!searchQuery && (
+            <Search 
+                onWrite={(value) => setSearchQuery(value)}
+                text={searchQuery}
+                catalog={catalog}
+                fastSearchParam={fastSearchParam}
+                isFucused={isFucused}
+                setIsFocused={setIsFocused}
+                ></Search>
+            {(!searchQuery && !isFucused) && (
                 <>
                     {/* <Fast_Search params={fastSearchParam}></Fast_Search> */}
                     <Big_slider></Big_slider>

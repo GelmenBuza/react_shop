@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import Search_card from '../Search_card';
 import style from './style.module.css';
 import Fast_Search from '../Fast_Search';
 
 
-export default function Search ({ onWrite, text, catalog, fastSearchParam }) {
-    const [isFucused, setIsFocused] = useState(false);
+export default function Search ({ onWrite, text, catalog, fastSearchParam, isFucused, setIsFocused}) {
+
 
     const validProducts = catalog.filter(product => product.images.length);
-    console.log(validProducts)
     const cards = [];
 
     for (const product of validProducts) {
@@ -38,7 +36,7 @@ export default function Search ({ onWrite, text, catalog, fastSearchParam }) {
 
 
     return (
-        <>
+        <div className={text ? style.search_cont_full : style.search_cont}>
             <label className={style.search}>
                 <input 
                     type="text" 
@@ -81,6 +79,6 @@ export default function Search ({ onWrite, text, catalog, fastSearchParam }) {
                     )}
                 </div>
             )}
-        </>
+        </div>
     )
 }
