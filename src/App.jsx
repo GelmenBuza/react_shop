@@ -1,8 +1,7 @@
 import Main_page from './components/Main_page'
 import './App.css'
 import { useEffect, useState } from 'react'
-
-
+import reservData from '../data.json';
 
 
 
@@ -21,7 +20,12 @@ function App() {
         setCategoriesCards(resp.categories);
         setFastSearch(resp.special_project_parameters_json.fast_search_strings.parameters_list);
       } catch (e) {
-        throw(new Error(e));
+        console.log('Api not connect, data from reserve')
+        const resp = reservData;
+        setCatalogCards(resp.products);
+        setCategoriesCards(resp.categories);
+        setFastSearch(resp.special_project_parameters_json.fast_search_strings.parameters_list);
+        throw new Error(e);
       }
     };
     load();
@@ -36,4 +40,4 @@ function App() {
   )
 }
 
-export default App; 
+export default App;

@@ -19,4 +19,14 @@
     color: #292928;
 }
 
+.cards_container {
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
 
+.searchDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
