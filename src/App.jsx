@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 function App() {
   const [catalogCards, setCatalogCards] = useState([])
   const [categoriesCards, setCategoriesCards] = useState([])
+  const [fastSearch, setFastSearch] = useState([]);
 
   useEffect(() => {
     const load = async () => {
@@ -18,16 +19,19 @@ function App() {
         console.log(resp)
         setCatalogCards(resp.products);
         setCategoriesCards(resp.categories);
+        setFastSearch(resp.special_project_parameters_json.fast_search_strings.parameters_list);
       } catch (e) {
         throw(new Error(e));
       }
     };
     load();
   }, [])
-  console.log(catalogCards, categoriesCards)
+
+  console.log(catalogCards, categoriesCards, fastSearch);
+
   return (
     <>
-      <Main_page catalog={catalogCards} categories={categoriesCards}></Main_page>
+      <Main_page catalog={catalogCards} categories={categoriesCards} fastSearchParam={fastSearch}></Main_page>
     </>
   )
 }

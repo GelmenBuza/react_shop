@@ -40,7 +40,7 @@ export default function Catalog_card ({image, name, price, oldPrice, discount, i
                         </div>
                     ) : (
                         <div className={style.card__price}>
-                            <span>{price}</span>
+                            <span>{price}₽</span>
                         </div>
                     )}
                     <span className={style.card__name}>{name}</span>

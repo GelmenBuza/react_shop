@@ -40,7 +40,6 @@ export default function Catalog ({catalog_cards}) {
                     break;
             }
         }
-
         cards.push({
             id: product.id,
             title: product.name,
@@ -61,7 +60,7 @@ export default function Catalog ({catalog_cards}) {
                         image={card.image}
                         name={card.title}
                         price={card.price}
-                        oldPrice={card.oldPrice}
+                        oldPrice={card.old_price}
                         discount={card.status.discount}
                         isSale={card.status.isSale}
                         isHit={card.status.isHit}
