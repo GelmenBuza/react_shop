@@ -1,10 +1,28 @@
 import style from './style.module.css';
 import Catalog_card from '../Catalog_card';
+import { useState, useEffect } from "react";
+
+const getInitialLikes = () => {
+    try {
+        const data = localStorage.getItem('liked');
+        return data ? JSON.parse(data) : [];
+    } catch {
+        return [];
+    }
+};
 
 
 export default function Catalog ({catalog_cards}) {
-
     const catalog_cards_filtered = catalog_cards.filter(product => product.images.length);
+
+
+    const [likedProducts, setLikedProduct] = useState(getInitialLikes);
+    
+    useEffect(() => {
+        localStorage.setItem('liked', JSON.stringify(likedProducts))
+    }, [likedProducts])
+
+
 
     const cards = [];
 
@@ -57,6 +75,7 @@ export default function Catalog ({catalog_cards}) {
                 cards.map((card) => (
                     <Catalog_card
                         key={card.id}
+                        id={card.id}
                         image={card.image}
                         name={card.title}
                         price={card.price}
@@ -66,6 +85,8 @@ export default function Catalog ({catalog_cards}) {
                         isHit={card.status.isHit}
                         isPremium={card.status.isPremium}
                         isNew={card.status.isNew}
+                        likedProducts={likedProducts}
+                        setLikedProducts={setLikedProduct}
                     />
                 ))
             }

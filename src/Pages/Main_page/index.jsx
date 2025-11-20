@@ -1,11 +1,11 @@
 import style from './style.module.css';
 import { useState } from 'react';
 
-import Search from '../Search'
-import Big_slider from '../Big_slider'
-import Small_slider from '../Small_slider'
-import Catalog from '../Catalog'
-import Navigation_bar from '../Navigation_bar'
+import Search from '../../components/Search'
+import Big_slider from '../../components/Big_slider'
+import Small_slider from '../../components/Small_slider'
+import Catalog from '../../components/Catalog'
+import Navigation_bar from '../../components/Navigation_bar'
 
 export default function Main_page({catalog, categories, fastSearchParam}) {
     const [searchQuery, setSearchQuery] = useState('');
@@ -13,7 +13,7 @@ export default function Main_page({catalog, categories, fastSearchParam}) {
 
     return (
         <div className={style.page}>
-            <Search 
+            <Search
                 onWrite={(value) => setSearchQuery(value)}
                 text={searchQuery}
                 catalog={catalog}

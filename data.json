@@ -1386,9 +1386,56 @@
     "has_prev": false,
     "per_page": 20,
     "total_pages": 1,
-    "total_products": 15
+    "total_products": 16
   },
   "products": [
+    {
+      "id": 5043,
+      "images": [
+        {
+          "Image_ID": 5208,
+          "Image_URL": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/test/fadc8f0d806ea7c43322aaab824318c6.jpg",
+          "MainImage": true,
+          "Product_ID": 5043,
+          "position": "product",
+          "sort_order": 0,
+          "title": "56u5jjmmymyumuumy.jpg"
+        },
+        {
+          "Image_ID": 5211,
+          "Image_URL": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/S99976fb59c164d30a4a9c4ab300fb06dl.jpg",
+          "MainImage": false,
+          "Product_ID": 5043,
+          "position": "parameters",
+          "sort_order": 1,
+          "title": "S99976fb59c164d30a4a9c4ab300fb06dl.jpg"
+        },
+        {
+          "Image_URL": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/photo_2025-06-18_14-15-32.jpg"
+        },
+        {
+          "image_url": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/vam_krishka.jpg",
+          "sort_order": 1
+        },
+        {
+          "image_url": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/test/IMG_2721.jpeg",
+          "sort_order": 2
+        }
+      ],
+      "marks": [
+        {
+          "Mark_Name": "new",
+          "color_code": "#45b649"
+        },
+        {
+          "Mark_Name": "hit",
+          "color_code": "#ff6723"
+        }
+      ],
+      "name": "тестик свежийф",
+      "old_price": null,
+      "price": 1231212
+    },
     {
       "id": 5041,
       "images": [
@@ -1466,6 +1513,14 @@
         },
         {
           "Image_URL": "https://cdn1.ozone.ru/s3/multimedia-3/6008448519.jpg"
+        },
+        {
+          "image_url": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/S99976fb59c164d30a4a9c4ab300fb06dl.jpg",
+          "sort_order": 1
+        },
+        {
+          "image_url": "https://s3.twcstorage.ru/19dc3eea-8d73649f-6043-4e9c-aefd-53f22d062e74/noxer/user_files/S99976fb59c164d30a4a9c4ab300fb06dl.jpg",
+          "sort_order": 2
         }
       ],
       "marks": [
@@ -1840,19 +1895,19 @@
     "PAYMENT_SYSTEM_INSERT_TEXT_description": "Спасибо за заказ в нашем царстве",
     "PAYMENT_SYSTEM_INSERT_TEXT_extra_field_1": "Не потеряй гордость, заплати нашему царю за товаррZX",
     "PAYMENT_SYSTEM_INSERT_TEXT_value": "1",
-    "PAYMENT_SYSTEM_value": "vtb_payment_system",
+    "PAYMENT_SYSTEM_value": "yokassa_payment_system",
     "SERVER_IP_ADDR_description": "http://localhost:7777",
     "SERVER_IP_ADDR_value": "https://noxer-test.ru",
     "cart_allow_post_payment_value": "yes",
     "cart_delivery_price_offline_value": "0",
-    "cart_delivery_price_value": "101",
+    "cart_delivery_price_value": "57",
     "footer_link_description": "@noxerai_bot",
     "footer_link_value": "https://noxer-ai.ru/bot/api/refs/json?ref=noxer",
     "payment_return_url_value": "https://bot-rybavseti.ru/static/?afterBuy=true",
-    "product_page_accordeon_item_header_12_description": "Описание",
-    "product_page_accordeon_item_header_12_value": "Брендд",
-    "product_page_accordeon_item_header_34_description": "Доп. информация",
-    "product_page_accordeon_item_header_34_value": "Характеристики новые",
+    "product_page_accordeon_item_header_12_description": "Описаниед",
+    "product_page_accordeon_item_header_12_value": "Бренддд",
+    "product_page_accordeon_item_header_34_description": "Доп. информацияд",
+    "product_page_accordeon_item_header_34_value": "Характеристики новыед",
     "project_footer_special_text_extra_field_1": "(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n   m[i].l=1*new Date();\n   for (var j = 0; j \u003C document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}\n   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n   (window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n\n   ym(12345678, \"init\", {\n        clickmap:true,\n        trackLinks:true,\n        accurateTrackBounce:true\n   });",
     "project_footer_special_text_value": "yes",
     "project_logo_description": "logo description",
@@ -1919,7 +1974,7 @@
       "id": 2,
       "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-4.svg",
       "meaning_tag": null,
-      "sort_order": 6,
+      "sort_order": 5,
       "url": "https://teletype.in/@brandbot/vW8XzSKnYug"
     },
     {
@@ -1928,7 +1983,7 @@
       "id": 3,
       "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-17.svg",
       "meaning_tag": null,
-      "sort_order": 4,
+      "sort_order": 3,
       "url": "https://teletype.in/@brandbot/1FoWO207kIH"
     },
     {
@@ -1937,7 +1992,7 @@
       "id": 5,
       "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-19.svg",
       "meaning_tag": null,
-      "sort_order": 2,
+      "sort_order": 1,
       "url": "https://teletype.in/@brandbot/lX_UiFM5bxS"
     },
     {
@@ -1979,7 +2034,7 @@
       "id": 105,
       "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-16.svg",
       "meaning_tag": null,
-      "sort_order": 5,
+      "sort_order": 4,
       "url": "https://teletype.in/@brandbot/lX_UiFM5bxS"
     },
     {
@@ -1988,20 +2043,11 @@
       "id": 110,
       "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-1.svg",
       "meaning_tag": null,
-      "sort_order": 3,
+      "sort_order": 2,
       "url": "https://teletype.in/@brandbot/lX_UiFM5bxS"
     },
     {
-      "description": "asdasd",
-      "extra_json": null,
-      "id": 111,
-      "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-1.svg",
-      "meaning_tag": null,
-      "sort_order": 1,
-      "url": "https://teletype.in/@brandbot/1FoWO207kIH"
-    },
-    {
-      "description": "",
+      "description": "123",
       "extra_json": null,
       "id": 112,
       "image_url": "https://static-sda.ru/front_end/icons/articleIcons/icon-17.svg",
@@ -2059,13 +2105,14 @@
         "Полуфабрикаты",
         "Рыба",
         "никто не знал где л",
-        "Кроссовки"
+        "Кроссовки",
+        "фвыа"
       ]
     },
     "global_reviews": {
-      "rating": 4.9,
+      "rating": 4.99,
       "title": "Показать все отзывы?!",
-      "total_ratings_count": 4,
+      "total_ratings_count": 44,
       "url": "https://noxer-test.ru/webapp/#/catalog"
     },
     "is_side_menu": true,
@@ -2073,8 +2120,7 @@
       "required_fields": [
         "phone",
         "fio",
-        "city",
-        "email"
+        "city"
       ]
     },
     "payment_buttons": {
