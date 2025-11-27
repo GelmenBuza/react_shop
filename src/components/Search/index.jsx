@@ -1,15 +1,17 @@
 import Search_card from '../Search_card';
 import style from './style.module.css';
 import Fast_Search from '../Fast_Search';
+import useCatalog from '../../stores/catalog_store.js';
 
 
-export default function Search ({ onWrite, text, catalog, fastSearchParam, isFucused, setIsFocused}) {
+export default function Search ({ onWrite, text, fastSearchParam, isFucused, setIsFocused}) {
+    const CatalogCards = useCatalog((state) => state.catalog);
 
-
-    const validProducts = catalog.filter(product => product.images.length);
+    // const validProducts = CatalogCards.catalog.filter(product => product.images.length);
     const cards = [];
+    console.log(CatalogCards)
 
-    for (const product of validProducts) {
+    for (const product of CatalogCards) {
 
         let discount; 
 

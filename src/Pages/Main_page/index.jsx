@@ -7,7 +7,7 @@ import Small_slider from '../../components/Small_slider'
 import Catalog from '../../components/Catalog'
 import Navigation_bar from '../../components/Navigation_bar'
 
-export default function Main_page({catalog, categories, fastSearchParam}) {
+export default function Main_page({ fastSearchParam }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [isFucused, setIsFocused] = useState(false);
 
@@ -16,7 +16,6 @@ export default function Main_page({catalog, categories, fastSearchParam}) {
             <Search
                 onWrite={(value) => setSearchQuery(value)}
                 text={searchQuery}
-                catalog={catalog}
                 fastSearchParam={fastSearchParam}
                 isFucused={isFucused}
                 setIsFocused={setIsFocused}
@@ -25,8 +24,8 @@ export default function Main_page({catalog, categories, fastSearchParam}) {
                 <>
                     {/* <Fast_Search params={fastSearchParam}></Fast_Search> */}
                     <Big_slider></Big_slider>
-                    <Small_slider categories_cards={categories}></Small_slider>
-                    <Catalog catalog_cards={catalog}></Catalog>
+                    <Small_slider></Small_slider>
+                    <Catalog></Catalog>
                     <Navigation_bar></Navigation_bar>
                 </>
             )}

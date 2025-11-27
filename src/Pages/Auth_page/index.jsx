@@ -1,14 +1,18 @@
 import style from './style.module.css';
 import { useState } from 'react';
+import useUser from '../../stores/user_store.js';
 
-export default function Auth_page({auth}) {
+export default function Auth_page() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const setUserEmail = useUser((state) => state.setUserEmail);
+    const setUserPassword = useUser((state) => state.setUserPassword);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email && password) {
-            auth(email, password)
+            setUserEmail(email);
+            setUserPassword(password);
         }
     }
 
@@ -33,7 +37,7 @@ export default function Auth_page({auth}) {
                         required
                     />
                 </label>
-                <button className={style.submit_btn} >Подтвердить</button>
+                <button className={style.submit_btn}>Подтвердить</button>
             </form>
         </div>
     )

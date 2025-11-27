@@ -1,10 +1,9 @@
-import style from './style.module.css';
 import useLike from '../../hooks/useLike';
+import style from './style.module.css';
 
-export default function Catalog_card ({id, image, name, price, oldPrice, discount, isSale, isHit, isPremium, isNew, likedProducts, setLikedProducts}) {
+export default function Catalog_card ({id, image, name, price, oldPrice, discount, isSale, isHit, isPremium, isNew}) {
 
-
-    const [isLike, toggleLike] = useLike(likedProducts, setLikedProducts);
+    const [isLike, toggleLike] = useLike();
 
 
     return (
