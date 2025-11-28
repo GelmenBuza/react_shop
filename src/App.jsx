@@ -56,7 +56,7 @@ function App() {
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch('https://noxer-test.ru/webapp/api/products/on_main');
+        const res = await fetch('http://noxer-test.ru/webapp/api/products/on_main');
         const resp = await res.json();
         console.log(resp)
         SetCatalogCards(normalizeCards(resp.products));

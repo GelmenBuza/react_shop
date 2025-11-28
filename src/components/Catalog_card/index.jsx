@@ -1,10 +1,13 @@
+import useCart from '../../hooks/useCart';
 import useLike from '../../hooks/useLike';
 import style from './style.module.css';
 
 export default function Catalog_card ({id, image, name, price, oldPrice, discount, isSale, isHit, isPremium, isNew}) {
 
     const [isLike, toggleLike] = useLike();
+    const [isCart, toggleCart] = useCart()
 
+    // const handleCart = () => {}
 
     return (
         <div className={style.card}>
@@ -55,7 +58,20 @@ export default function Catalog_card ({id, image, name, price, oldPrice, discoun
                     )}
                     <span className={style.card__name}>{name}</span>
                 </div>
-                <button className={style.card__btn}>Выбрать</button>
+                <div>
+                    {
+                        isCart(id) ? 
+                        <div className={style.card__btn}>
+                            <button onClick={() => toggleCart(id, 'minus')}>-</button>
+                            <span>В корзине</span>
+                            <button onClick={() => toggleCart(id, 'add')}>+</button>
+                        </div>
+                        :
+                        <button className={style.card__btn} onClick={() => toggleCart(id, 'add')}>
+                            Выбрать
+                        </button>
+                    }
+                </div>
             </div>
         </div>
     )

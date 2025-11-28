@@ -8,3 +8,11 @@
     padding: 80px 0;
     height: 100%;
 }
+
+.cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    gap: 10px;
+}
