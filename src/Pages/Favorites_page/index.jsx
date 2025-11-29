@@ -56,6 +56,9 @@ export default function Favorites_page() {
     }
     return (
         <div className={style.page}>
+            <div>
+                <h2 className={style.page__title}>Избранные товары</h2>
+            </div>
             {
                 cards.length !== 0 ?
                     <div className={style.container}>
@@ -79,7 +82,7 @@ export default function Favorites_page() {
                     </div>
 
                     :
-                    <p>У вес не избранных товаров</p>
+                    <p className={style.empty}>У вес не избранных товаров</p>
             }
             <Navigation_bar></Navigation_bar>
         </div>

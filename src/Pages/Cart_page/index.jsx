@@ -57,36 +57,43 @@ export default function Cart_page() {
     }
     return (
         <div className={style.page}>
+            <h2 className={style.page__title}>Корзина</h2>
             {
                 cards.length !== 0 ?
-                    <>
-                        {/* <div className={style.}> */}
-
-                        {/* </div> */}
-                        <div className={style.cards_container}>
-                            {
-                                cards.map((card) => (
-                                    <Catalog_card
-                                        key={card.id}
-                                        id={card.id}
-                                        image={card.image}
-                                        name={card.title}
-                                        price={card.price}
-                                        oldPrice={card.old_price}
-                                        discount={card.status.discount}
-                                        isSale={card.status.isSale}
-                                        isHit={card.status.isHit}
-                                        isPremium={card.status.isPremium}
-                                        isNew={card.status.isNew}
-                                    />
-                                ))
-                            }
-                        </div>
-                    </>
-
-
+                    <div className={style.cart__container}>
+                        <p>Товаров в корзине: {cards.length}</p>
+                        <p>Цена: {cartProduct.reduce((acc, item) => {
+                            const product = cards.find(card => card.id === item.id);
+                            return acc + (product ? product.price * item.count : 0);
+                        }, 0)}
+                        </p>
+                    </div>
                     :
                     <p>Корзина пуста</p>
+            }
+            {
+                cards.length !== 0 &&
+                <>
+                    <div className={style.cards_container}>
+                        {
+                            cards.map((card) => (
+                                <Catalog_card
+                                    key={card.id}
+                                    id={card.id}
+                                    image={card.image}
+                                    name={card.title}
+                                    price={card.price}
+                                    oldPrice={card.old_price}
+                                    discount={card.status.discount}
+                                    isSale={card.status.isSale}
+                                    isHit={card.status.isHit}
+                                    isPremium={card.status.isPremium}
+                                    isNew={card.status.isNew}
+                                />
+                            ))
+                        }
+                    </div>
+                </>
             }
             <Navigation_bar></Navigation_bar>
         </div>
