@@ -116,10 +116,15 @@
 }
 
 .card__name {
+    display: block;
     color: #292928;
     font-size: 13px;
     line-height: 115%;
     text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card__btn {

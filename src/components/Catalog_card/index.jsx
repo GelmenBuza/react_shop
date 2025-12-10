@@ -1,6 +1,6 @@
+import style from './style.module.css';
 import useCart from '../../hooks/useCart';
 import useLike from '../../hooks/useLike';
-import style from './style.module.css';
 import useUser from '../../stores/user_store.js'
 
 export default function Catalog_card({ id, image, name, price, oldPrice, discount, isSale, isHit, isPremium, isNew }) {

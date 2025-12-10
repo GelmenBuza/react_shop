@@ -8,6 +8,9 @@
     padding: 80px 0;
     height: 100%;
 }
+.pageTitle {
+    color: #292928;
+}
 
 .card_container {
     display: flex;

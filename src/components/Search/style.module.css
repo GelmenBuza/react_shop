@@ -18,7 +18,7 @@
 }
 
 .search {
-    display: block;
+    display: flex;
     z-index: 1;
     border-radius: 20px;
     width: 95%;
@@ -36,6 +36,7 @@
     border: none;
     background-color: transparent;
     color: #292928;
+    outline: none;
 }
 
 .cards_container {
@@ -46,8 +47,16 @@
 
 .searchDropdown {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    gap: 10px;
     height: 100%;
+    width: 100%;
+    color: #292928;
+}
+
+.closeBtn {
+    background-color: transparent;
+    border: none;
     color: #292928;
 }

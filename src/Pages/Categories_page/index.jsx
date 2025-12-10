@@ -21,6 +21,7 @@ export default function Categories_page() {
 
     return (
         <div className={style.page}>
+            <h2 className={style.pageTitle}>Категории</h2>
             <div className={style.card_container}>
                 {categories_card.map((category) => (
                     <Category_card

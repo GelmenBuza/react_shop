@@ -4,7 +4,7 @@ import Fast_Search from '../Fast_Search';
 import useCatalog from '../../stores/catalog_store.js';
 
 
-export default function Search ({ onWrite, text, fastSearchParam, isFucused, setIsFocused}) {
+export default function Search({onWrite, text, fastSearchParam, isFucused, setIsFocused}) {
     const CatalogCards = useCatalog((state) => state.catalog);
 
     // const validProducts = CatalogCards.catalog.filter(product => product.images.length);
@@ -13,11 +13,12 @@ export default function Search ({ onWrite, text, fastSearchParam, isFucused, set
 
     for (const product of CatalogCards) {
 
-        let discount; 
+        let discount;
 
         if (product.old_price) {
-            discount = Math.floor((product.price/product.old_price)*100)/100 
-        };
+            discount = Math.floor((product.price / product.old_price) * 100) / 100
+        }
+        ;
 
         cards.push({
             id: product.id,
@@ -30,18 +31,17 @@ export default function Search ({ onWrite, text, fastSearchParam, isFucused, set
     }
 
     const filteredCards = text ?
-        cards.filter(card =>card.title.toLowerCase().includes(text.toLowerCase())
-    )
-    : 
-    [];
-
+        cards.filter(card => card.title.toLowerCase().includes(text.toLowerCase())
+        )
+        :
+        [];
 
 
     return (
         <div className={text ? style.search_cont_full : style.search_cont}>
             <label className={style.search}>
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     name="search"
                     placeholder="Найти товары"
                     value={text}
@@ -50,34 +50,43 @@ export default function Search ({ onWrite, text, fastSearchParam, isFucused, set
                         setIsFocused(true);
                     }}
                     onFocus={() => setIsFocused(true)}
-                    onBlur={() => 
-                        setTimeout(() => setIsFocused(false), 200)
+                    onBlur={() =>
+                        !text && setTimeout(() => setIsFocused(false), 200)
                     }
                     className={style.search__input}
                 />
+                {
+                    text &&
+                    (
+                        <button onClick={() => onWrite('')} className={style.closeBtn}>
+                            X
+                        </button>
+                    )
+                }
             </label>
             {isFucused && (
                 <div className={style.searchDropdown}>
                     {text ? (
                         filteredCards.length > 0 ? (
-                        <div className={style.cards_container}>
-                            {
-                                filteredCards.map((card)=> (
-                                    <Search_card
-                                        key={card.id}
-                                        title={card.title}
-                                        image={card.image}
-                                        price={card.price}
-                                        old_price={card.old_price}
-                                        discount={card.discount}
-                                    />
-                                ))}
-                        </div>
+                            <div className={style.cards_container}>
+                                {
+                                    filteredCards.map((card) => (
+                                        <Search_card
+                                            key={card.id}
+                                            id={card.id}
+                                            title={card.title}
+                                            image={card.image}
+                                            price={card.price}
+                                            old_price={card.old_price}
+                                            discount={card.discount}
+                                        />
+                                    ))}
+                            </div>
                         ) : (
                             <div className={style.noResults}>Ничего не найдено</div>
                         )
                     ) : (
-                        <Fast_Search params={fastSearchParam} />
+                        <Fast_Search params={fastSearchParam}/>
                     )}
                 </div>
             )}
