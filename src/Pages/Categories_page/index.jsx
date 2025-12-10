@@ -1,5 +1,4 @@
 import style from "./style.module.css";
-import { useState } from "react";
 import Navigation_bar from "../../components/Navigation_bar";
 import useCategory from "../../stores/category_store.js";
 import Category_card from "../../components/Category_card";
